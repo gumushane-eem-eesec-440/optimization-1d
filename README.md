@@ -24,26 +24,27 @@ The output of our model y is defined as</br>
 We see that the loss function has a dependency on the model parameter through a chain of equations given above. Our goal here is to utilize this relationship within an iterative approach to find the **optimal**<sup>1</sup> value for the parameter.
 ## Gradient-Descent
 We have derived the relationship between the loss function L and the model parameter a and now we are going to use it in an optimization algorithm called Gradient Descent as</br>
-<img src="math/gradient descent.JPG" alt="gradient descent algorithm for 1d optimization problem" height="20"/></br>
+<img src="math/gradient descent.JPG" alt="gradient descent algorithm for 1d optimization problem" height="50"/></br>
 in order to determine the correct value for the parameter a step by step (i.e., iteratively). The partial derivative term in the equation of the Gradient-Descent algorithm for the 1-d optimization problem given above can explicitly be written as</br>
-<img src="math/chain rule.JPG" alt="chain of partial derivatives" height="20"/></br>
+<img src="math/chain rule.JPG" alt="chain of partial derivatives" height="50"/></br>
 and if we replace each partial derivative term with the corresponding terms, we get</br>
-<img src="math/manipulation1.JPG" alt="manipulation1" height="20"/></br>
+<img src="math/manipulation1.JPG" alt="manipulation1" height="40"/></br>
 If we make substitutions, we obtain</br>
-<img src="math/manipulation2.JPG" alt="manipulation3" height="20"/></br>
+<img src="math/manipulation2.JPG" alt="manipulation3" height="40"/></br>
 and</br>
-<img src="math/manipulation3.JPG" alt="manipulation3" height="20"/></br>
+<img src="math/manipulation3.JPG" alt="manipulation3" height="40"/></br>
 and eventually the final form of the Gradient-Descent algorithm for our problem is achieved.</br>
 <img src="math/gradient descent final.JPG" alt="gradient descent algorithm final form" height="20"/></br>
-Here the subscript k refers to the iterations; it varies from k=0 to k=7x21 where 7 is the epoche number and 21 is the size (length) of the input-target data as can be seen in *Fig. 4* and *Fig. 5*.
+Here the subscript k refers to the iterations; it varies from k=0 to k=7x21 where 7 is the epoche number and 21 is the size (length) of the input-target data as can be seen in the x-axes of the plots in *Fig. 4* and *Fig. 5*. Now we initialize the model parameter a as a<sub>0</sub>=10</sup>2<sup> run the gradient-descent formula derived above and see the 
 
 <img src="figure/loss function.png" alt="loss function" height="300"/></br>
-*Figure 2:* Loss function.
+*Figure 4:* Loss function.
 
 <img src="figure/search for a.png" alt="search for parameter a" height="300"/></br>
-*Figure 3:* Searching for the optimal value of parameter a.
+*Figure 5:* Searching for the optimal value of parameter a.
 
 <img src="figure/line fit.png" alt="line fit with gradient descent" height="300"/></br>
-*Figure 4:* Line fit with gradient descent.
+*Figure 6:* Line fit with gradient descent.
 ## Footnotes 
-<sup>1</sup> **Optimal** means the best according to the data and the anticipated model.
+<sup>1</sup> **Optimal** means the best according to the data and the anticipated model.</br>
+<sup>2</sup> The initial value for the parameter(s) can be assigned arbitrarily. Generally the initialization is made in an random manner.
