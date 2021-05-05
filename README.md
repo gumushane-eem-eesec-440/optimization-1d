@@ -5,8 +5,15 @@ We have captured sensor data with Arduino as can be seen in *Fig. 1*.
 <img src="figure/input target data.png" alt="input target data" height="300"/></br>
 *Figure 1:* Input target data.
 
-<img src="figure/general optimization model.jpg" alt="general optimization model" height="200"/></br>
+We would like to develope a model for the data shown above. The most general model is called a **black-box** model.
+
+<img src="figure/general optimization model.jpg" alt="general optimization model" height="180"/></br>
 *Figure 2:* Black-box model for the data captured in *Fig. 1*.
+
+If we look at the data carefully, we see that the points can be represented with a line in the form of y = ax + b. If we further examine the axes and data together, we see that the line actually passes through 0, which simplifies the line equation (i.e., our model) to y = ax. Eventually, *Fig. 2* is updated to *Fig. 3*.
+
+<img src="figure/anticipated optimization model.jpg" alt="anticipated optimization model" height="180"/></br>
+*Figure 3:* Anticipated model for the data captured in *Fig. 1*.
 
 ## Least Squares
 
