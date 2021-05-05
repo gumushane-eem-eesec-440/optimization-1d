@@ -5,13 +5,13 @@ We have captured sensor data with Arduino as can be seen in *Fig. 1*.
 <img src="figure/input target data.png" alt="input target data" height="300"/></br>
 *Figure 1:* Data captured with an Arduino-sensor pair.
 
-*MATLAB kodu*
+*MATLAB script for reading and plotting data*
 ```
 load('data.txt');
 xdata = data(:,1); tdata = data(:,2);
 plot(xdata, tdata, 'k.');
 ```
-*Python kodu*
+*Python script for reading and plotting data*
 ```
 import pandas
 import matplotlib.pyplot as plt
@@ -56,6 +56,30 @@ Here the script k refers to the iterations; it varies from k=0 to k=7x21 where 7
 <img src="figure/search for a.png" alt="search for parameter a" height="300"/></br>
 *Figure 5:* Searching for the optimal value of parameter a.
 
+*MATLAB script for initialization of Gradient Descent*
+```
+a0 = 10 % başlangıç değeri
+n = 7; % epoch sayısı
+a = a0;
+alpha = 0.005; % adım büyüklüğü - step size
+ahistory = zeros(1, n*length(xdata)+1); % parametre arayışının yolculuğunu kaydedelim
+ahistory(1) = a0; % for k=0 the parameter starts from a0
+% compute the L value for k=0
+lossFunction = zeros(1, n+1); % her bir epoche bittiğinde kayıp fonksiyonunu hesapla
+for i=1:length(xdata)
+    lossFunction(1) = lossFunction(1) + 0.5*(tdata(i)-a*xdata(i))^2;
+end
+```
+*MATLAB script for implementation of Gradient Descenton 1d Optimization Problem*
+```
+for i=1:n % epoch numarası
+    for j=1:length(xdata) % batch'deki her bir veriyi tek tek giriş olarak veriyoruz
+        a = a + alpha*(tdata(j)-a*xdata(j))*xdata(j); % eğim düşümü yöntemi (gradient descent) ile parametreyi güncelliyoruz
+        ahistory((i-1)*length(xdata)+j) = a;
+        lossFunction(i+1) = lossFunction(i+1) + 0.5*(tdata(j)-a*xdata(j))^2;
+    end
+end
+```
 Eventually, the final value of the parameter a is obtained approximately as a ≈ 1.52 as can be seen in *Fig. 5*. Now, we have the correct model and if we plot it, which is y = ax line mentined before, then we obtain the result in *Fig. 6*.
 
 <img src="figure/line fit.png" alt="line fit with gradient descent algorithm" height="300"/></br>
