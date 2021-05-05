@@ -94,4 +94,4 @@ The overall picture of the 1d optimization problem is visualized in *Fig. 7*.
 <sup>2</sup> The initial value for the parameter(s) can be assigned arbitrarily. Generally the initialization is made in an random manner.
 ## Video
 Please watch the video below to see how this page is built (click on the image).</br>
-[![IMAGE ALT TEXT HERE](figure/kendi kendini dengeleyen robot.jpg.png)](https://www.youtube.com/watch?v=bkvXMme4lFs&t=743s)
+[![IMAGE ALT TEXT HERE](figure/thumbnail.jpg)](https://www.youtube.com/watch?v=bkvXMme4lFs&t=743s)
