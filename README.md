@@ -20,9 +20,22 @@ Now, let's formulate this problem with a technique called **Least Squares**. If 
 Here, the loss function L depends on the error e, which is defined (according to the formulation shown in *Fig. 3*) as</br>
 <img src="math/error.JPG" alt="error" height="25"/></br>
 The output of our model y is defined as</br>
-<img src="math/output.JPG" alt="output of the model" height="24"/></br>
+<img src="math/output.JPG" alt="output of the model" height="20"/></br>
 We see that the loss function has a dependency on the model parameter through a chain of equations given above. Our goal here is to utilize this relationship within an iterative approach to find the **optimal**<sup>1</sup> value for the parameter.
 ## Gradient-Descent
+We have derived the relationship between the loss function L and the model parameter a and now we are going to use it in an optimization algorithm called Gradient Descent as</br>
+<img src="math/gradient descent.JPG" alt="gradient descent algorithm for 1d optimization problem" height="20"/></br>
+in order to determine the correct value for the parameter a step by step (i.e., iteratively). The partial derivative term in the equation of the Gradient-Descent algorithm for the 1-d optimization problem given above can explicitly be written as</br>
+<img src="math/chain rule.JPG" alt="chain of partial derivatives" height="20"/></br>
+and if we replace each partial derivative term with the corresponding terms, we get</br>
+<img src="math/manipulation1.JPG" alt="manipulation1" height="20"/></br>
+If we make substitutions, we obtain</br>
+<img src="math/manipulation2.JPG" alt="manipulation3" height="20"/></br>
+and</br>
+<img src="math/manipulation3.JPG" alt="manipulation3" height="20"/></br>
+and eventually the final form of the Gradient-Descent algorithm for our problem is achieved.</br>
+<img src="math/gradient descent final.JPG" alt="gradient descent algorithm final form" height="20"/></br>
+Here the subscript k refers to the iterations; it varies from k=0 to k=7x21 where 7 is the epoche number and 21 is the size (length) of the input-target data as can be seen in *Fig. 4* and *Fig. 5*.
 
 <img src="figure/loss function.png" alt="loss function" height="300"/></br>
 *Figure 2:* Loss function.
