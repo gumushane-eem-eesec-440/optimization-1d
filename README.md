@@ -88,10 +88,12 @@ Eventually, the final value of the parameter a is obtained approximately as a â‰
 The overall picture of the 1d optimization problem is visualized in *Fig. 7*.
 
 <img src="figure/least squares gradient descent.png" alt="1d optimization problem formulation - overall look" height="700"/></br>
-*Figure 7:* One dimensional optimization problem with **least squares** and **gradient descent** formulation.
+*Figure 7:* One dimensional optimization problem with **least squares** and **gradient descent** formulation [1].
 ## Footnotes
 <sup>1</sup> **Optimal** means the best according to the data and the anticipated model.</br>
 <sup>2</sup> The initial value for the parameter(s) can be assigned arbitrarily. Generally the initialization is made in an random manner.
+## References
+[1] Emojis in github - https://gist.github.com/rxaviers/7360908
 ## Video
 Please watch the video below to see how this page is built (click on the image).</br>
 [![IMAGE ALT TEXT HERE](figure/thumbnail.jpg)](https://www.youtube.com/watch?v=bkvXMme4lFs&t=743s)
