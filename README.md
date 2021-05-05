@@ -5,6 +5,19 @@ We have captured sensor data with Arduino as can be seen in *Fig. 1*.
 <img src="figure/input target data.png" alt="input target data" height="300"/></br>
 *Figure 1:* Data captured with an Arduino-sensor pair.
 
+*MATLAB kodu*
+```
+load('data.txt');
+xdata = data(:,1); tdata = data(:,2);
+plot(xdata, tdata, 'k.');
+```
+*Python kodu*
+```
+import pandas
+import matplotlib.pyplot as plt
+import numpy as np # numerical python kütüphanesi
+```
+
 We would like to develop a model for the data shown in *Fig. 1*. If we cannot predict the (mathematical) structure of the model by examining the data, it can be referred to as a **black-box** model. No matter what the model is, we are going to formulate this **model fitting** problem with Least Squares method and Gradient-Descent algorithm here. The approach for building a model for the captured daha is illustrated in *Fig. 2*.
 
 <img src="figure/general optimization model.jpg" alt="general optimization model" height="180"/></br>
