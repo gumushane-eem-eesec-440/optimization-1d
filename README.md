@@ -35,7 +35,7 @@ and</br>
 <img src="math/manipulation3.JPG" alt="manipulation3" height="50"/></br>
 and eventually the final form of the Gradient-Descent algorithm for our problem is achieved.</br>
 <img src="math/update formula final.JPG" alt="gradient descent algorithm final form" height="30"/></br>
-Here the subscript k refers to the iterations; it varies from k=0 to k=7x21 where 7 is the epoche number and 21 is the size (length) of the input-target data as can be seen in the x-axes of the plots in *Fig. 4* and *Fig. 5*. Now we initialize the model parameter a as a<sub>0</sub>=10</sup>2<sup> run the gradient-descent formula derived above and see the drop in the loss function L (*Fig. 4*) and convergence of the parameter a to the optimal value (*Fig. 5*).
+Here the subscript k refers to the iterations; it varies from k=0 to k=7x21 where 7 is the epoche number and 21 is the size (length) of the input-target data as can be seen in the x-axes of the plots in *Fig. 4* and *Fig. 5*. Now we initialize the model parameter a as a<sub>0</sub>=10<sup>2</sup> run the gradient-descent formula derived above and see the drop in the loss function L (*Fig. 4*) and convergence of the parameter a to the optimal value (*Fig. 5*).
 
 <img src="figure/loss function.png" alt="loss function" height="300"/></br>
 *Figure 4:* Loss function.
