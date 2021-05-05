@@ -18,7 +18,7 @@ If we look at the data in *Fig. 1* carefully, we see that the points can be repr
 Now, let's formulate this problem with a technique called **Least Squares**. If we minimize the error for each data point, then we obtain the correct parameters and the model. In least squares, because of the input-target data size (multi-dimensional), we minimize the sum of errors in order to optimize the adjustable (sought) parameters. Unfortunately, this yields to an undesired result in the case of errors cancelling each other and sometimes despite having zero total error, obtained model is irrelevant. To avoid this issue, instead of summing the errors, we sum the *squared* errors, which actually names the technique of **Least Squares**. If we are able to minimize the sum of squared errors, then we achieve the **least squares** literally :thumbsup: Now let's start formulating the problem by defining the loss function L (that is aimed to be minimized) as</br>
 <img src="math/loss fcn.JPG" alt="loss function" height="50"/></br>
 Here, the loss function L depends on the error e, which is defined as (according to the formulation shown in *Fig. 3*)</br>
-<img src="math/error.JPG" alt="loss function" height="50"/></br>
+<img src="math/error.JPG" alt="loss function" height="40"/></br>
 
 ## Gradient-Descent
 <img src="figure/loss function.png" alt="loss function" height="300"/></br>
