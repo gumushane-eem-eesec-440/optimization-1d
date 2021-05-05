@@ -37,7 +37,8 @@ set(gca,'xtick', [-5:1:5], 'fontsize', 14, ...
 n = 7; % epoch sayısı
 a = a0; % başlangıç değeri
 alpha = 0.005; % adım büyüklüğü - step size
-ahistory = zeros(1,n); % parametre arayışının yolculuğunu kaydedelim
+ahistory = zeros(1,n*length(xdata)+1); % parametre arayışının yolculuğunu kaydedelim
+ahistory(1) = a0;
 lossFunction = zeros(1, n+1);
 for i=1:length(xdata)
     lossFunction(1) = lossFunction(1) + 0.5*(tdata(i)-a*xdata(i))^2;
@@ -46,7 +47,7 @@ end
 for i=1:n % epoch numarası
     for j=1:length(xdata) % batch'deki her bir veriyi tek tek giriş olarak veriyoruz
         a = a + alpha*(tdata(j)-a*xdata(j))*xdata(j); % eğim düşümü yöntemi (gradient descent) ile parametreyi güncelliyoruz
-        ahistory((i-1)*length(xdata)+j) = a;
+        ahistory((i-1)*length(xdata)+j+1) = a;
         lossFunction(i+1) = lossFunction(i+1) + 0.5*(tdata(j)-a*xdata(j))^2;
     end
 end
@@ -62,7 +63,7 @@ xlabel('x');
 % title('En küçük kareler metodu ile doğru uydurma (line-curve fitting)');
 
 figure(3); set(gcf, 'position', [488  342  502.6  420]);
-plot([0 1:n*length(xdata)], [a0 ahistory], 'b.-', 'markersize', 11, 'linewidth', 1.5);
+plot([0:n*length(xdata)], ahistory, 'b.-', 'markersize', 11, 'linewidth', 1.5);
 grid on; set(gca,'gridlinestyle','--');
 xlabel('veri sıralaması', 'fontsize', 16); ylabel('a', 'fontsize', 16);
 title('Öngörülen y = ax modeline göre a parametresinin bulunma yolculuğu');
