@@ -84,6 +84,11 @@ Eventually, the final value of the parameter a is obtained approximately as a â‰
 
 <img src="figure/line fit.png" alt="line fit with gradient descent algorithm" height="300"/></br>
 *Figure 6:* Line fit with gradient descent algorithm.
-## Footnotes 
+
+The overall picture of the 1d optimization problem is visualized in *Fig. 7*.
+
+<img src="figure/least squares gradient descent.png" alt="1d optimization problem formulation - overall look" height="300"/></br>
+*Figure 7:* Line fit with gradient descent algorithm.
+## Footnotes
 <sup>1</sup> **Optimal** means the best according to the data and the anticipated model.</br>
 <sup>2</sup> The initial value for the parameter(s) can be assigned arbitrarily. Generally the initialization is made in an random manner.
