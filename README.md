@@ -19,9 +19,9 @@ Now, let's formulate this problem with a technique called **Least Squares**. If 
 <img src="math/loss fcn.JPG" alt="loss function" height="50"/></br>
 Here, the loss function L depends on the error e, which is defined (according to the formulation shown in *Fig. 3*) as</br>
 <img src="math/error.JPG" alt="error" height="30"/></br>
-The output of our model y is defined as
+The output of our model y is defined as</br>
 <img src="math/output.JPG" alt="output of the model" height="30"/></br>
-We see that the loss function has a dependency on the model parameter through a chain of equations given above. Our goal here is to utilize this relationship within an iterative approach to find the **optimal**<sup></sup> value for the parameter.
+We see that the loss function has a dependency on the model parameter through a chain of equations given above. Our goal here is to utilize this relationship within an iterative approach to find the **optimal**</sup><sup> value for the parameter.
 ## Gradient-Descent
 
 <img src="figure/loss function.png" alt="loss function" height="300"/></br>
@@ -33,4 +33,4 @@ We see that the loss function has a dependency on the model parameter through a 
 <img src="figure/line fit.png" alt="line fit with gradient descent" height="300"/></br>
 *Figure 4:* Line fit with gradient descent.
 ## Footnotes 
-<sup></sup> **Optimal** means the best according to the data and the anticipated model.
+</sup><sup> **Optimal** means the best according to the data and the anticipated model.
