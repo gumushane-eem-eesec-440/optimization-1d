@@ -1,4 +1,5 @@
 # 1-dimensional Optimization Problem
+# Numerical Solution
 ## Introduction
 We have captured sensor data with Arduino as can be seen in *Fig. 1*. Here x axis can be considered to represent time in seconds.</br>
 *Şekil 1*'de görüldüğü gibi Arduino ile sensör verisi yakaladık. Burada x ekseninin saniye cinsinden zamanı temsil ettiği düşünülebilir.
@@ -103,7 +104,12 @@ Eventually, the final value of the parameter a is obtained approximately as a �
 
 <img src="figure/line fit.png" alt="line fit with gradient descent algorithm" height="300"/></br>
 *Figure 6:* Line fit with gradient descent algorithm.
+# Analytic (Closed-Form or Mathematical) Solution
+xa = t
+x<sup>T</sup>xa = x<sup>T</sup>t
+a = (x<sup>T</sup>x)<sup>-1</sup>t
 
+# Overall Picture
 The overall picture of the 1d optimization problem is visualized in *Fig. 7*.
 
 <img src="figure/least squares gradient descent updated.png" alt="1d optimization problem formulation - overall look" height="700"/></br>
