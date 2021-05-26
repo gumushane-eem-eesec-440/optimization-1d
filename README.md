@@ -106,7 +106,7 @@ Eventually, the final value of the parameter a is obtained approximately as a â‰
 
 The overall picture of the 1d optimization problem is visualized in *Fig. 7*.
 
-<img src="figure/least squares gradient descent.png" alt="1d optimization problem formulation - overall look" height="700"/></br>
+<img src="figure/least squares gradient descent updated.png" alt="1d optimization problem formulation - overall look" height="700"/></br>
 *Figure 7:* One dimensional optimization problem with **least squares** and **gradient descent** formulation [1].
 ## Footnotes
 <sup>1</sup> **Optimal** means the best according to the data and the anticipated model.</br>
