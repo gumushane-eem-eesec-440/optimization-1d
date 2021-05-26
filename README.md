@@ -105,8 +105,8 @@ Eventually, the final value of the parameter a is obtained approximately as a â‰
 <img src="figure/line fit.png" alt="line fit with gradient descent algorithm" height="300"/></br>
 *Figure 6:* Line fit with gradient descent algorithm.
 # Analytic (Closed-Form or Mathematical) Solution
-xa = t
-x<sup>T</sup>xa = x<sup>T</sup>t
+xa = t</br>
+x<sup>T</sup>xa = x<sup>T</sup>t</br>
 a = (x<sup>T</sup>x)<sup>-1</sup>t
 
 # Overall Picture
