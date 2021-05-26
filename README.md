@@ -1,9 +1,11 @@
 # 1-dimensional Optimization Problem
 ## Introduction
-We have captured sensor data with Arduino as can be seen in *Fig. 1*.
+We have captured sensor data with Arduino as can be seen in *Fig. 1*. Here x axis can be considered to represent time in seconds.</br>
+*Şekil 1*'de görüldüğü gibi Arduino ile sensör verisi yakaladık. Burada x ekseninin saniye cinsinden zamanı temsil ettiği düşünülebilir.
 
 <img src="figure/input target data.png" alt="input target data" height="300"/></br>
-*Figure 1:* Data captured with an Arduino-sensor pair.
+*Figure 1:* Data captured with an Arduino-sensor pair.</br>
+*Şekil 1:* Arduino-sensör ikilisi ile yakalanan veri.</br>
 
 *MATLAB script for reading and plotting data*
 ```
@@ -13,12 +15,14 @@ plot(xdata, tdata, 'k.');
 ```
 *Python script for reading and plotting data*
 ```
-import pandas
-import matplotlib.pyplot as plt
-import numpy as np # numerical python kütüphanesi
+xdata = np.array([[-5],[-4.5],[-4],[-3.5],[-3],[-2.5],[-2],[-1.5],[-1],[-0.5],[0],\
+                  [0.5],[1.0],[1.5],[2.0],[2.5],[3.0],[3.5],[4.0],[4.5],[5.0]],"float32")
+tdata = np.array([[-6.5930],[-6.6869],[-4.8374],[-6.4320],[-3.7876],[-5.5401],[-1.7953],\
+                  [-1.5357],[0.2840],[-2.3838],[1.6338],[0.7898],[1.9596],[1.5143],\
+                  [1.3099],[5.1525],[3.0781],[4.7319],[6.4896],[8.7402],[7.5694]],"float32")
 ```
 
-We would like to develop a model for the data shown in *Fig. 1*. If we cannot predict the (mathematical) structure of the model by examining the data, it can be referred to as a **black-box** model. No matter what the model is, we are going to formulate this **model fitting** problem with Least Squares method and Gradient-Descent algorithm here. The approach for building a model for the captured daha is illustrated in *Fig. 2*.
+We would like to develop a model for the data shown in *Fig. 1*. If we cannot predict the (mathematical) structure of the model by examining the data, then it is referred to as a **black-box** model. No matter what the model is, we are going to formulate this **model fitting** problem with Least Squares method and Gradient-Descent algorithm here. The approach for building a model for the captured daha is illustrated in *Fig. 2*.
 
 <img src="figure/general optimization model.jpg" alt="general optimization model" height="180"/></br>
 *Figure 2:* Black-box model for the data captured in *Fig. 1*.
@@ -70,7 +74,8 @@ for i=1:length(xdata)
     lossFunction(1) = lossFunction(1) + 0.5*(tdata(i)-a*xdata(i))^2;
 end
 ```
-*MATLAB script for implementation of Gradient Descenton 1d Optimization Problem*
+
+*MATLAB script for implementation of Gradient Descent - 1d Optimization Problem*
 ```
 for i=1:n % epoch numarası
     for j=1:length(xdata) % batch'deki her bir veriyi tek tek giriş olarak veriyoruz
@@ -80,6 +85,20 @@ for i=1:n % epoch numarası
     end
 end
 ```
+
+*Python script for 1d Optimization Problem*
+```
+n = 7
+a0 = 10 # başlangıç değeri (initial value for parameter a)
+a = a0
+alpha = 0.005; # adım büyüklüğü - step size
+i = 1 # index for epoch number
+while i <= n:
+  for j, x in enumerate(xdata):
+    a = a + alpha*(tdata[j]-a*x)*x # eğim düşümü yöntemi (gradient descent) ile parametreyi güncelliyoruz
+  i = i + 1
+```
+
 Eventually, the final value of the parameter a is obtained approximately as a ≈ 1.52 as can be seen in *Fig. 5*. Now, we have the correct model and if we plot it, which is y = ax line mentined before, then we obtain the result in *Fig. 6*.
 
 <img src="figure/line fit.png" alt="line fit with gradient descent algorithm" height="300"/></br>
